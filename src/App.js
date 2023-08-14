@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Alchemy, Network } from 'alchemy-sdk';
 import BlockList from './BlockList';
 import AccountBalance from './AccountBalance';
+import Nft from './Nft';
+import PendingTransactions from './PendingTransactions';
 import Navigation from './Navigation';
 
 import './App.css';
@@ -28,6 +30,8 @@ function App() {
         <Navigation />
         <Route path="/" exact><BlockList alchemy={alchemy} /></Route>
         <Route path="/account-balance"><AccountBalance alchemy={alchemy} /></Route>
+        <Route path="/nft"><Nft alchemy={alchemy} /></Route>
+        <Route path="/pending-transactions"><PendingTransactions alchemy={alchemy}/></Route>
       </div>
     </Router>
   )
